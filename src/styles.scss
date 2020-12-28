@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lora:wght@500&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Hind+Madurai:wght@500&family=Lora:wght@500&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Hind+Madurai:wght@500&family=Lora:wght@500&family=Montserrat:wght@600&family=Trirong&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Hind+Madurai:wght@500&family=Lora:wght@500&family=Montserrat:wght@600&family=Trirong&family=Yantramanav&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+ box-sizing: border-box;
+}
+
+html body { 
+ margin: 0;
+ font-family: 'Roboto', sans-serif;
+ color: whitesmoke;
+ letter-spacing: 4px;
+}
+
+
+// font-family: 'Audiowide', cursive;
+// font-family: 'Lora', serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Hind Madurai', sans-serif;
+// font-family: 'Trirong', serif;
+// font-family: 'Yantramanav', sans-serif;
+// font-family: 'Roboto', sans-serif;

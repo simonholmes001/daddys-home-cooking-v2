@@ -1,0 +1,49 @@
+.arrows {
+  display: none;
+}
+
+.extended-wrapper {
+  padding: 0 1.5em 2em;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+ul.carousel {
+  margin-bottom: 1em;
+}
+
+ul.carousel li {
+  background: #422847;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+ul.carousel li .main-img {
+  width: 50%;
+  height: 50%;
+}
+
+@media (min-width: 650px) {
+  .wrapper {
+    padding: 1.5em 4em;
+  }
+  .carousel-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .arrows {
+    display: block;
+  }
+  .ul.carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ul.carousel li {
+    margin-right: 1em;
+    margin-bottom: 0;
+    padding: 2em;
+  }
+}
+/*# sourceMappingURL=recipes.component.css.map */
