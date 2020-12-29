@@ -10,8 +10,12 @@
           box-sizing: border-box;
 }
 
-html body {
+body, html {
   margin: 0;
+  height: 100%;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
   letter-spacing: 4px;
