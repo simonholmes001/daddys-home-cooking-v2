@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 .navbar-brand {
  padding: 0.5em;
 
@@ -14,18 +16,18 @@
  padding: 1em 0;
 }
 
-.container{
+.container-footer{
  footer {
   align-content: center;
   justify-content: center;
   display: flex;
   .footer-icon {
-   color: black;
+   color: color(secondary);
    padding: 0.5em;
   }
-  
+
   .footer-text {
-   color: black;
+   color: color(secondary);
    text-decoration: none;
    padding-top: 1.1em;
   }

@@ -1,0 +1,134 @@
+.home-wrapper {
+  background: url("../../../assets/img/img_1.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  display: block;
+  position: relative;
+}
+
+.home-wrapper .main-text {
+  padding-top: 325px;
+  padding-bottom: 0.25em;
+  padding-left: 4em;
+  margin: 0;
+}
+
+.home-wrapper .sub-text {
+  padding-top: 20px;
+  padding-left: 4em;
+  margin: 0;
+}
+
+.home-wrapper::before {
+  content: " ";
+  position: absolute;
+  left: 9.5%;
+  top: 290px;
+  height: 100px;
+  width: 40%;
+  border-bottom: 3px solid #9f0000;
+}
+
+/* =================== start of animated text slider in home =================== */
+.slide-content {
+  width: 100vw;
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -33.5%;
+  margin-top: -5%;
+  padding-top: 9.5%;
+  padding-bottom: 15%;
+}
+
+.slider-wrapper {
+  font-size: 40px;
+  color: #aaa;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider {
+  height: 90px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+.slider div {
+  color: #fff;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 7px 15px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-text1 {
+  -webkit-animation: slide 5s linear infinite;
+          animation: slide 5s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    margin-top: -200px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+  38% {
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    margin-top: -200px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+  38% {
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=home.component.css.map */

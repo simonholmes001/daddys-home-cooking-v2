@@ -20,4 +20,8 @@ body {
   color: whitesmoke;
   letter-spacing: 4px;
 }
-/*# sourceMappingURL=styles.css.map */
+
+p {
+  color: black;
+}
+/*# sourceMappingURL=rpage.component.css.map */
