@@ -21,41 +21,7 @@ body {
   letter-spacing: 4px;
 }
 
-.navbar-brand {
-  padding: 0.5em;
-}
-
-.navbar-brand .nav-text {
-  padding-left: 1em;
-}
-
-.navbar-brand .fas {
-  padding-left: 1em;
-}
-
-.nav-link {
-  padding: 1em 0;
-}
-
-.container-footer footer {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container-footer footer .footer-icon {
+p {
   color: black;
-  padding: 0.5em;
 }
-
-.container-footer footer .footer-text {
-  color: black;
-  text-decoration: none;
-  padding-top: 1.1em;
-}
-/*# sourceMappingURL=app.component.css.map */
+/*# sourceMappingURL=rpage.component.css.map */

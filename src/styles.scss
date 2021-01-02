@@ -7,6 +7,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Hind+Madurai:wght@500&family=Lora:wght@500&family=Montserrat:wght@600&family=Trirong&family=Yantramanav&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+$colors: (
+ primary: whitesmoke,
+ secondary: black,
+ heart-emoji: red
+);
+
+@function color($color-name) {
+ @return map-get($colors, $color-name)
+}
+
 
 * {
  box-sizing: border-box;
@@ -19,7 +29,7 @@ body, html {
 
 body {
  font-family: 'Roboto', sans-serif;
- color: whitesmoke;
+ color: color(primary);
  letter-spacing: 4px;
 }
 
