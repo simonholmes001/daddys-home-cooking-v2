@@ -32,8 +32,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  -ms-grid-rows: (minmax(50px, 1fr))[auto-fill];
+      grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
   border-radius: 10px;
   padding: 1em;
   -ms-grid-column-align: center;
@@ -96,31 +96,6 @@ body {
   text-decoration: none;
 }
 
-.container-emoji {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
-  color: black;
-}
-
-.emoji {
-  color: red;
-  font-size: 3em;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
-}
-
 .recipe-block {
   display: -ms-grid;
   display: grid;
@@ -159,6 +134,7 @@ body {
 
 .recipe-block .recipe-img .img-text {
   color: black;
+  text-align: center;
 }
 
 h2 {
@@ -166,11 +142,40 @@ h2 {
 }
 
 @media only screen and (max-width: 500px) {
+  .container {
+    font-size: 8px;
+  }
+  .container h4 {
+    font-size: 16px;
+  }
   .recipe-block {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+  }
+  .container-img .main-img-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5em;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+  }
+  .overlay-text {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=recipes.component.css.map */
