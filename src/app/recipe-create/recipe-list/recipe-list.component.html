@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="recipe-container" *ngFor="let recipe of recipes">
+    <p>Recipe:</p> <p class="recipe-text"> {{ recipe.recipeName }}</p>
+    <p>Difficulty:</p> <p class="recipe-text"> {{ recipe.difficulty }}</p>
+    <p>Prep Time:</p> <p class="recipe-text"> {{ recipe.prepTime }}</p>
+    <p>Cooking Time:</p> <p class="recipe-text"> {{ recipe.cookingTime }}</p>
+    <p>Ingredients:</p> <p class="recipe-text"> {{ recipe.ingredrients }}</p>
+    <p>Instructions:</p> <p class="recipe-text">  {{ recipe.instructions }}</p>
+    <p>Tags:</p> <p class="recipe-text">  {{ recipe.tags }}</p>
+  </div>
+</div>
