@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .home-wrapper {
  background: url('../../../assets/img/img_1.jpeg') no-repeat center center fixed;
  -webkit-background-size: cover;
@@ -34,6 +36,7 @@
 }
 
 /* =================== start of animated text slider in home =================== */
+
 .slide-content {
 	width: 100vw;
 	height: 35vh;
@@ -80,3 +83,40 @@
 	71% {margin-top:0px;}
 	100% {margin-top:0px;}
 }
+
+/* =================== end of animated text slider in home =================== */
+
+@media only screen and (max-width: 500px) {
+
+    .home-wrapper {
+      .main-text {
+        padding-top: 100px;
+        margin-left: -25%;
+      }
+      .sub-text {
+        padding-top: 1px;
+        margin-left: -25%;
+      }
+    }
+
+    .home-wrapper::before {
+      content: " ";
+      position: absolute;
+      left: 7%;
+      top: 90px;
+      height: 100px;
+      width: 75%;
+      border-bottom: 3px solid rgb(159, 0, 0);
+     }
+
+     .slider {
+       top: 100px;
+       padding-left: 125px;
+       width: 100%;
+     }
+
+     .slide-content {
+       margin-bottom: 8rem;
+     }
+
+  }
