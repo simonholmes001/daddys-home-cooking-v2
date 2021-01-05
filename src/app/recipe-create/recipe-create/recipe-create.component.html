@@ -5,7 +5,7 @@
 <div class="form-container">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" [(ngModel)]="recipeName">
+    <input type="text" class="form-control">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Difficulty</label>
@@ -28,10 +28,12 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Image URL</label>
+    <input type="text" class="form-control">
+  </div>
+  <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Tags</label>
     <input type="text" class="form-control">
   </div>
-    <button type="submit" class="btn btn-primary" (click)="onAddRecipe()">Create your Recipe</button>
+    <button type="submit" class="btn btn-primary">Create your Recipe</button>
   </div>
-
-<p>{{ newRecipe }}</p>

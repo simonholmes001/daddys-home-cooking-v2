@@ -24,10 +24,8 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
 }
 
 .recipe-container {
@@ -51,6 +49,14 @@ body {
 
 .recipe-text {
   text-align: left;
+}
+
+p {
+  display: -ms-grid;
+  display: grid;
+  color: black;
+  text-align: center;
+  padding: 1rem;
 }
 
 @media only screen and (max-width: 500px) {

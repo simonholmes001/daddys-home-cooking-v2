@@ -26,4 +26,5 @@ import { RecipeListComponent } from './recipe-create/recipe-list/recipe-list.com
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

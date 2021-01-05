@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-create',
@@ -6,13 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-create.component.scss']
 })
 export class RecipeCreateComponent implements OnInit {
-
-  recipeName = '';
-  newRecipe = '';
-
-  onAddRecipe() {
-    this.newRecipe = this.recipeName;
-  }
 
   constructor() { }
 
