@@ -35,13 +35,21 @@ app.post('/recipes', (req, res) => {
 })
 
 // Update a recipe
-app.patch('/recipe-list/:id', (req, res) => {
-  res.send("hello Simon");
+app.patch('/recipes/:id', (req, res) => {
+  recipe.findOneAndUpdate({ _id: req.params.id }, {
+    $set: req.body
+  }).then(() => {
+    res.sendStatus(200);
+  });
 })
 
 // Delete a recipe
-app.delete('/recipe-list/:id', (req, res) => {
-  res.send("hello Simon");
+app.delete('/recipes/:id', (req, res) => {
+  recipe.findByIdAndRemove({
+    _id: req.params.id
+  }).then((removedRecipeDoc) => {
+    res.send(removedRecipeDoc);
+  });
 })
 
 app.listen(3000, () => {

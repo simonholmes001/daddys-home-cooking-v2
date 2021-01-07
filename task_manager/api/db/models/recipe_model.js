@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const recipeSchema = new mongoose.Schema({
-  _recipeId: {
-    type: mongoose.Types.ObjectId,
-    // required: true
-  },
+  // _recipeId: {
+  //   type: mongoose.Types.ObjectId,
+  //   required: true
+  // },
   recipeName: {
     type: String,
     required: true,
