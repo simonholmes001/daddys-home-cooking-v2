@@ -26,6 +26,8 @@ body {
   background-size: cover;
   display: block;
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
 
 .home-wrapper .main-text {
