@@ -13,8 +13,15 @@ connectDB()
 // Load middleware
 app.use(bodyParser.json());
 
+// CORS headers middleware
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
+
 // Retrieve recipes
-app.get('/recipes', (req, res) => {
+app.get('/list-recipes', (req, res) => {
   recipe.find().then((recipes) => {
     res.send(recipes);
   }).catch((e) => {
@@ -23,11 +30,27 @@ app.get('/recipes', (req, res) => {
 })
 
 // Create a recipe
-app.post('/recipes', (req, res) => {
+app.post('/create-recipes', (req, res) => {
   let recipeName = req.body.recipeName;
+  let difficulty = req.body.difficulty;
+  let prepTime = req.body.prepTime;
+  let cookTime = req.body.cookTime;
+  let ingredients = req.body.ingredients;
+  let instructions = req.body.instructions;
+  let imgURL = req.body.imgURL;
+  let videoURL = req.body.videoURL;
+  let tags = req.body.tags;
 
   let newRecipe = new recipe({
-    recipeName
+    recipeName,
+    difficulty,
+    prepTime,
+    cookTime,
+    ingredients,
+    instructions,
+    imgURL,
+    videoURL,
+    tags
   });
   newRecipe.save().then((newRecipeDoc) => {
     res.send(newRecipeDoc);
@@ -35,7 +58,7 @@ app.post('/recipes', (req, res) => {
 })
 
 // Update a recipe
-app.patch('/recipes/:id', (req, res) => {
+app.patch('/create-recipes/:id', (req, res) => {
   recipe.findOneAndUpdate({ _id: req.params.id }, {
     $set: req.body
   }).then(() => {
@@ -44,7 +67,7 @@ app.patch('/recipes/:id', (req, res) => {
 })
 
 // Delete a recipe
-app.delete('/recipes/:id', (req, res) => {
+app.delete('/create-recipes/:id', (req, res) => {
   recipe.findByIdAndRemove({
     _id: req.params.id
   }).then((removedRecipeDoc) => {

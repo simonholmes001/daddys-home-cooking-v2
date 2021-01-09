@@ -12,27 +12,27 @@ const recipeSchema = new mongoose.Schema({
   },
   difficulty: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   prepTime: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
-  cookingTime: {
+  cookTime: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   ingredients: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   instructions: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   imgURL: {
@@ -40,9 +40,14 @@ const recipeSchema = new mongoose.Schema({
     // required: true,
     trim: true,
   },
-  tags: {
+  videoURL: {
     type: String,
     // required: true,
+    trim: true,
+  },
+  tags: {
+    type: String,
+    required: true,
     trim: true,
   }
 })

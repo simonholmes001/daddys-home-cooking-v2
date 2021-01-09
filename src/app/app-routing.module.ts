@@ -4,15 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RecipesComponent } from './pages/recipes/recipes.component';
 import { RpageComponent } from './pages/rpage/rpage.component';
-import { RecipeCreateComponent } from './recipe-create/recipe-create/recipe-create.component';
-import { RecipeListComponent } from './recipe-create/recipe-list/recipe-list.component';
+import { RecipeCreateComponent } from './create-recipes/create-recipes/create-recipes.component';
+import { RecipeListComponent } from './create-recipes/list-recipes/list-recipes.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'recipes', component: RecipesComponent },
   { path: 'recipe-page', component: RpageComponent },
-  { path: 'recipe-create', component: RecipeCreateComponent },
-  { path: 'recipe-list', component: RecipeListComponent },
+  { path: 'create-recipes', component: RecipeCreateComponent },
+  { path: 'list-recipes', component: RecipeListComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `home`
 ];
 
