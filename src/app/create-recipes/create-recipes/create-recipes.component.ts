@@ -13,8 +13,9 @@ export class RecipeCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNewRecipe() {
-    this.taskService.createRecipe("Soup", "2/5", "30 minutes", "1 hour", "potatoes, cabbage, beans","Step 1: do this and that, Step 2: conitinue yon, Step 3: dinnae fash ", "../../../../assets/img/asdsasdasd", "../../../../assets/img/asdsasdasd", "fine ta, Italian, Pasta").subscribe((response: any) => {
+  createRecipe(recipeName: string, difficulty: string, prepTime: string, cookTime: string, ingredients: string,
+    instructions: string, imgURL: string, videoURL: string, tags: string) {
+    this.taskService.createRecipe(recipeName, difficulty, prepTime, cookTime, ingredients,instructions, imgURL, videoURL, tags).subscribe((response: any) => {
       console.log(response)
     });
   }

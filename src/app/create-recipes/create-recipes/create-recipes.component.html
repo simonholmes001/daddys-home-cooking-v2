@@ -4,40 +4,40 @@
 
 <div class="form-container">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control">
+    <label for="validationDefault01" class="form-label" required>Name</label>
+    <input #recipeName type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Difficulty</label>
-    <input type="text" class="form-control">
+    <label for="exampleFormControlInput1" class="form-label" required>Difficulty</label>
+    <input #difficulty type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Prep Time</label>
-    <input type="text" class="form-control">
+    <label for="exampleFormControlInput1" class="form-label" required>Prep Time</label>
+    <input #prepTime type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Cooking Time</label>
-    <input type="text" class="form-control">
+    <label  for="exampleFormControlInput1" class="form-label" required>Cooking Time</label>
+    <input #cookTime type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Ingredients</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1" class="form-label" required>Ingredients</label>
+    <input #ingredients class="form-control" id="exampleFormControlTextarea1" rows="3">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Instructions</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1" class="form-label" required>Instructions</label>
+    <input #instructions class="form-control" id="exampleFormControlTextarea1" rows="3">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Image URL</label>
-    <input type="text" class="form-control">
+    <label for="exampleFormControlInput1" class="form-label">Image URL</label>
+    <input #imgURL type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Video URL</label>
-    <input type="text" class="form-control">
+    <label for="exampleFormControlInput1" class="form-label">Video URL</label>
+    <input #videoURL type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Tags</label>
-    <input type="text" class="form-control">
+    <label for="exampleFormControlInput1" class="form-label" required>Tags</label>
+    <input #tags type="text" class="form-control">
   </div>
-    <button type="submit" class="btn btn-primary" (click)="createNewRecipe()">Create your Recipe</button>
+    <button type="submit" class="btn btn-primary" (click)="createRecipe(recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, instructions.value, imgURL.value, videoURL.value, tags.value)">Create your Recipe</button>
   </div>
