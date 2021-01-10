@@ -1,11 +1,18 @@
-<div class="container">
-  <div class="recipe-container">
-    <p>Recipe:</p> <p class="recipe-text"> </p>
-    <p>Difficulty:</p> <p class="recipe-text"> </p>
-    <p>Prep Time:</p> <p class="recipe-text"> </p>
-    <p>Cooking Time:</p> <p class="recipe-text"> </p>
-    <p>Ingredients:</p> <p class="recipe-text"> </p>
-    <p>Instructions:</p> <p class="recipe-text">  </p>
-    <p>Tags:</p> <p class="recipe-text">  </p>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let recipe of recipes">
+      <div class="card-body mb-3 text-dark bg-light">
+      <h5 class="card-title">Name: {{ recipe.recipeName }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ recipe._id }}</h6>
+      <h6 class="card-subtitle mb-2">Difficulty: {{ recipe.difficulty }}</h6>
+      <h6 class="card-subtitle mb-2">Preparation Time: {{ recipe.prepTime }}</h6>
+      <h6 class="card-subtitle mb-2">Cooking Time: {{ recipe.cookTime }}</h6>
+      <p class="card-text"> <b>Ingredients: </b> {{ recipe.ingredients }}</p>
+      <p class="card-text"><b>Instructions: </b> {{ recipe.instructions }}</p>
+      <h6 class="card-subtitle mb-2">Tags: {{ recipe.tags }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{ recipe.imgURL }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{ recipe.videoURL }}</h6>
+      <a class="btn btn-success btn-modify">Modify</a>
+      <a class="btn btn-danger btn-delete" (click)="deleteRecipe(recipe._id)">Delete</a>
+      </div> <br><br>
+    </div> <br><br>
   </div>
-</div>

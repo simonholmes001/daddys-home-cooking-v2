@@ -1,42 +1,17 @@
 @import "../../../styles.scss";
 
-.container {
-  display: grid;
-  // background-color: blue;
-  grid-template-columns: repeat(2, auto);
+.col {
+  padding: 4em;
 }
 
-.recipe-container {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  // background-color: yellow;
-  color: color(secondary);
-  margin: auto;
-  justify-content: center;
-  text-align: left;
-  margin-top: 3rem;
-  width: 90%;
-  border-style: solid;
-  border-color: rgba(27, 102, 160, 0.2);
-  border-radius: 16px;
-  padding: 1rem;
+.btn-modify {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 20%;
 }
 
-.recipe-text {
-  text-align: left;
-}
-
-p {
-  display: grid;
-  color: color(secondary);
-  text-align: center;
-  padding: 1rem;
-}
-
-@media only screen and (max-width: 500px) {
-  .container {
-    display: grid;
-    // background-color: blue;
-    grid-template-columns: auto;
- }
+.btn-delete {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 30%;
 }

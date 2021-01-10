@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 // CORS headers middleware
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 })
@@ -58,7 +59,7 @@ app.post('/create-recipes', (req, res) => {
 })
 
 // Update a recipe
-app.patch('/create-recipes/:id', (req, res) => {
+app.patch('/list-recipes/:id', (req, res) => {
   recipe.findOneAndUpdate({ _id: req.params.id }, {
     $set: req.body
   }).then(() => {
@@ -67,7 +68,7 @@ app.patch('/create-recipes/:id', (req, res) => {
 })
 
 // Delete a recipe
-app.delete('/create-recipes/:id', (req, res) => {
+app.delete('/list-recipes/:id', (req, res) => {
   recipe.findByIdAndRemove({
     _id: req.params.id
   }).then((removedRecipeDoc) => {

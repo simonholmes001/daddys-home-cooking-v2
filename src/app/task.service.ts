@@ -13,4 +13,13 @@ export class TaskService {
     // We want to send a web request to create a recipe
     return this.webRequestService.post('create-recipes', { recipeName, difficulty, prepTime, cookTime, ingredients,instructions, imgURL, videoURL, tags })
   }
+
+  listRecipes() {
+    return this.webRequestService.get('list-recipes');
+  }
+
+  deleteRecipe(uri: string) {
+    return this.webRequestService.delete(`list-recipes/${uri}`);
+  }
+
 }
