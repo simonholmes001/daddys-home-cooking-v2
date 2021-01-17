@@ -1,0 +1,65 @@
+<div class="container">
+  <h1>Modify a Recipe</h1>
+</div>
+  <div class="form-container" *ngIf="recipes">
+    <div class="mb-3">
+      <label for="validationDefault01" class="form-label" required>Name</label>
+      <input #recipeName type="text" class="form-control" value="{{ recipes.recipeName }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label" required>Difficulty</label>
+      <input #difficulty type="text" class="form-control" value="{{ recipes.difficulty }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label" required>Prep Time</label>
+      <input #prepTime type="text" class="form-control" value="{{ recipes.prepTime }}">
+    </div>
+    <div class="mb-3">
+      <label  for="exampleFormControlInput1" class="form-label" required>Cooking Time</label>
+      <input #cookTime type="text" class="form-control" value="{{ recipes.cookTiime }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label" required>Ingredients</label>
+      <input #ingredients class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{ recipes.ingredients }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label" required>Instructions</label>
+      <input #instructions class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{ recipes.instructions }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Image URL</label>
+      <input #imgURL type="text" class="form-control" value="{{ recipes.imgURL }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Video URL</label>
+      <input #videoURL type="text" class="form-control" value="{{ recipes.videoURL }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label" required>Tags</label>
+      <input #tags type="text" class="form-control" value="{{ recipes.tags }}">
+    </div>
+    <div class="button">
+      <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateRecipe(recipes._id, recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, instructions.value, imgURL.value, videoURL.value, tags.value)">Modify Recipe</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recipe for {{ recipes.recipeName }} has been modified</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="modifyAnother()">Modify another recipe</button>
+          <button type="button" class="btn btn-success" (click)="goHome()">Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    </div>
+

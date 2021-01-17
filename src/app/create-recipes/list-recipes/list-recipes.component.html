@@ -11,7 +11,7 @@
       <h6 class="card-subtitle mb-2">Tags: {{ recipe.tags }}</h6>
       <h6 class="card-subtitle mb-2 text-muted">{{ recipe.imgURL }}</h6>
       <h6 class="card-subtitle mb-2 text-muted">{{ recipe.videoURL }}</h6>
-      <a class="btn btn-success btn-modify">Modify</a>
+      <a class="btn btn-success btn-modify" (click)="modifyRecipe(recipe._id)" >Modify</a>
       <a class="btn btn-danger btn-delete" (click)="deleteRecipe(recipe._id)">Delete</a>
       </div> <br><br>
     </div> <br><br>

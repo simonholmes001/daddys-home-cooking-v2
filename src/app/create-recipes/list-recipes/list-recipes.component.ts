@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from 'src/app/task.service';
 
 @Component({
@@ -12,11 +12,11 @@ export class RecipeListComponent implements OnInit {
   recipes: any[] | undefined;
   uri: any;
 
-  constructor(private taskService: TaskService, private route: ActivatedRoute) { }
+  constructor(private taskService: TaskService, private router: Router) { }
 
   ngOnInit(): void {
     this.taskService.listRecipes().subscribe((recipes: any) => {
-      this.recipes = recipes;
+      return this.recipes = recipes;
     });
   }
 
@@ -28,4 +28,8 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
+  modifyRecipe(uri: string) {
+    this.router.navigateByUrl(`/modify-recipes/${uri}`);
+  }
 }
+

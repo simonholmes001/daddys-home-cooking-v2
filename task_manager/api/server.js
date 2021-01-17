@@ -30,6 +30,14 @@ app.get('/list-recipes', (req, res) => {
   });
 })
 
+app.get('/modify-recipes/:id', (req, res) => {
+  recipe.findById({
+    _id: req.params.id
+  }).then((recipes) => {
+    res.send(recipes);
+  });
+})
+
 // Create a recipe
 app.post('/create-recipes', (req, res) => {
   let recipeName = req.body.recipeName;

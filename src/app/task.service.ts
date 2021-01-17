@@ -22,4 +22,13 @@ export class TaskService {
     return this.webRequestService.delete(`list-recipes/${uri}`);
   }
 
+  getIndividualRecipes(_id: string) {
+    return this.webRequestService.get(`modify-recipes/${_id}`);
+  }
+
+  updateRecipe(_id: string, recipeName: string, difficulty: string, prepTime: string, cookTime: string, ingredients: string,
+    instructions: string, imgURL: string, videoURL: string, tags: string) {
+    return this.webRequestService.patch(`list-recipes/${_id}`, { recipeName, difficulty, prepTime, cookTime, ingredients,instructions, imgURL, videoURL, tags });
+  }
+
 }
