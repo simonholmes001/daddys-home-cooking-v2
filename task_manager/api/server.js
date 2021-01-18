@@ -13,8 +13,16 @@ connectDB()
 // Load middleware
 app.use(bodyParser.json());
 
+// CORS headers middleware
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
+
 // Retrieve recipes
-app.get('/recipes', (req, res) => {
+app.get('/list-recipes', (req, res) => {
   recipe.find().then((recipes) => {
     res.send(recipes);
   }).catch((e) => {
@@ -22,12 +30,56 @@ app.get('/recipes', (req, res) => {
   });
 })
 
+app.get('/modify-recipes/:id', (req, res) => {
+  recipe.findById({
+    _id: req.params.id
+  }).then((recipes) => {
+    res.send(recipes);
+  });
+})
+
 // Create a recipe
-app.post('/recipes', (req, res) => {
+app.post('/create-recipes', (req, res) => {
   let recipeName = req.body.recipeName;
+  let difficulty = req.body.difficulty;
+  let prepTime = req.body.prepTime;
+  let cookTime = req.body.cookTime;
+  let ingredients = req.body.ingredients;
+  let step1 = req.body.step1;
+  let step2 = req.body.step2;
+  let step3 = req.body.step3;
+  let step4 = req.body.step4;
+  let step5 = req.body.step5;
+  let step6 = req.body.step6;
+  let step7 = req.body.step7;
+  let step8 = req.body.step8;
+  let step9 = req.body.step9;
+  let step10 = req.body.step10;
+  let imgURL = req.body.imgURL;
+  let videoURL = req.body.videoURL;
+  let additionalLinks = req.body.additionalLinks;
+  let tags = req.body.tags;
 
   let newRecipe = new recipe({
-    recipeName
+    recipeName,
+    difficulty,
+    prepTime,
+    cookTime,
+    ingredients,
+    step1,
+    step2,
+    step3,
+    step4,
+    step5,
+    step6,
+    step7,
+    step8,
+    step9,
+    step10,
+    imgURL,
+    videoURL,
+    additionalLinks,
+    tags
   });
   newRecipe.save().then((newRecipeDoc) => {
     res.send(newRecipeDoc);
@@ -35,7 +87,7 @@ app.post('/recipes', (req, res) => {
 })
 
 // Update a recipe
-app.patch('/recipes/:id', (req, res) => {
+app.patch('/list-recipes/:id', (req, res) => {
   recipe.findOneAndUpdate({ _id: req.params.id }, {
     $set: req.body
   }).then(() => {
@@ -44,7 +96,7 @@ app.patch('/recipes/:id', (req, res) => {
 })
 
 // Delete a recipe
-app.delete('/recipes/:id', (req, res) => {
+app.delete('/list-recipes/:id', (req, res) => {
   recipe.findByIdAndRemove({
     _id: req.params.id
   }).then((removedRecipeDoc) => {

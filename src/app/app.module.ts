@@ -6,22 +6,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RpageComponent } from './pages/rpage/rpage.component';
-import { RecipeCreateComponent } from './recipe-create/recipe-create/recipe-create.component';
-import { RecipeListComponent } from './recipe-create/recipe-list/recipe-list.component';
+import { RecipeCreateComponent } from './create-recipes/create-recipes/create-recipes.component';
+import { RecipeListComponent } from './create-recipes/list-recipes/list-recipes.component';
+import { ModifyRecipesComponent } from './create-recipes/modify-recipes/modify-recipes.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     RpageComponent,
     RecipeCreateComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    ModifyRecipesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

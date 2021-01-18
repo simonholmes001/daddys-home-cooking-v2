@@ -12,25 +12,70 @@ const recipeSchema = new mongoose.Schema({
   },
   difficulty: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   prepTime: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
-  cookingTime: {
+  cookTime: {
     type: String,
-    // required: true,
+    required: true,
     trim: true,
   },
   ingredients: {
     type: String,
+    required: true,
+    trim: true,
+  },
+  step1: {
+    type: String,
     // required: true,
     trim: true,
   },
-  instructions: {
+  step2: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step3: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step4: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step5: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step6: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step7: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step8: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step9: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step10: {
     type: String,
     // required: true,
     trim: true,
@@ -40,9 +85,19 @@ const recipeSchema = new mongoose.Schema({
     // required: true,
     trim: true,
   },
-  tags: {
+  videoURL: {
     type: String,
     // required: true,
+    trim: true,
+  },
+  additionalLinks: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  tags: {
+    type: String,
+    required: true,
     trim: true,
   }
 })
