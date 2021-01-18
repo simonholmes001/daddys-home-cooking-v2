@@ -30,9 +30,54 @@ const recipeSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  instructions: {
+  step1: {
     type: String,
-    required: true,
+    // required: true,
+    trim: true,
+  },
+  step2: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step3: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step4: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step5: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step6: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step7: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step8: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step9: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  step10: {
+    type: String,
+    // required: true,
     trim: true,
   },
   imgURL: {
@@ -41,6 +86,11 @@ const recipeSchema = new mongoose.Schema({
     trim: true,
   },
   videoURL: {
+    type: String,
+    // required: true,
+    trim: true,
+  },
+  additionalLinks: {
     type: String,
     // required: true,
     trim: true,

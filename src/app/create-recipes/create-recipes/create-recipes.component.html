@@ -2,30 +2,66 @@
   <h2>Create a new recipe</h2>
 </div>
 
-<div class="form-container">
+<div class="form-container needs-validation" novalidate>
   <div class="mb-3">
-    <label for="validationDefault01" class="form-label" required>Name</label>
-    <input #recipeName type="text" class="form-control">
+    <label for="validationCustom01" class="form-label">Name</label>
+    <input #recipeName type="text" class="form-control" id="validationCustom01" value="Name" required>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label" required>Difficulty</label>
-    <input #difficulty type="text" class="form-control">
+    <label for="validationCustom02" class="form-label">Difficulty</label>
+    <input #difficulty type="text" class="form-control" id="validationCustom02" value="Difficulty" required>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label" required>Prep Time</label>
-    <input #prepTime type="text" class="form-control">
+    <label for="validationCustom03" class="form-label">Prep Time</label>
+    <input #prepTime type="text" class="form-control" id="validationCustom03" value="Prep Time" required>
   </div>
   <div class="mb-3">
-    <label  for="exampleFormControlInput1" class="form-label" required>Cooking Time</label>
-    <input #cookTime type="text" class="form-control">
+    <label  for="validationCustom04" class="form-label">Cooking Time</label>
+    <input #cookTime type="text" class="form-control" id="validationCustom04" value="Cook Time" required>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label" required>Ingredients</label>
-    <input #ingredients class="form-control" id="exampleFormControlTextarea1" rows="3">
+    <label for="validationCustom05" class="form-label">Ingredients</label>
+    <textarea #ingredients name="" class="form-control" id="validationCustom05" cols="90" rows="10" value="Ingredients" required></textarea>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label" required>Instructions</label>
-    <input #instructions class="form-control" id="exampleFormControlTextarea1" rows="3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 1</label>
+    <textarea #step1 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 2</label>
+    <textarea #step2 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 3</label>
+    <textarea #step3 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 4</label>
+    <textarea #step4 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 5</label>
+    <textarea #step5 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 6</label>
+    <textarea #step6 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 7</label>
+    <textarea #step7 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 8</label>
+    <textarea #step8 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 9</label>
+    <textarea #step9 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" required>Step 10</label>
+    <textarea #step10 name="" id="exampleFormControlTextarea1" cols="90" rows="7"></textarea>
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Image URL</label>
@@ -36,8 +72,12 @@
     <input #videoURL type="text" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label" required>Tags</label>
-    <input #tags type="text" class="form-control">
+      <label for="exampleFormControlTextarea1" class="form-label">Additional Links</label>
+      <textarea #additionalLinks name="" id="exampleFormControlTextarea1" cols="90" rows="5"></textarea>
+    </div>
+  <div class="mb-3">
+    <label for="validationCustom06" class="form-label" required>Tags</label>
+    <input #tags type="text" class="form-control" id="validationCustom06"  value="Tags" required>
   </div>
-    <button type="submit" class="btn btn-primary" (click)="createRecipe(recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, instructions.value, imgURL.value, videoURL.value, tags.value)">Create your Recipe</button>
+    <button type="submit" class="btn btn-primary" (click)="createRecipe(recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, step1.value, step2.value, step3.value, step4.value, step5.value, step6.value, step7.value, step8.value, step9.value, step10.value, imgURL.value, videoURL.value, additionalLinks.value, tags.value)">Create your Recipe</button>
   </div>

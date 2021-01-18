@@ -27,9 +27,8 @@ export class ModifyRecipesComponent implements OnInit {
       )
     }
 
-    updateRecipe(uri: string, recipeName: string, difficulty: string, prepTime: string, cookTime: string, ingredients: string,
-      instructions: string, imgURL: string, videoURL: string, tags: string) {
-      this.taskService.updateRecipe(`${uri}`, recipeName, difficulty, prepTime, cookTime, ingredients,instructions, imgURL, videoURL, tags).subscribe((response: any) => {
+    updateRecipe(uri: string, recipeName: string, difficulty: string, prepTime: string, cookTime: string, ingredients: string, step1: string, step2: string, step3: string, step4: string, step5: string, step6: string, step7: string, step8: string, step9: string, step10: string, imgURL: string, videoURL: string, additionalLinks: string, tags: string) {
+      this.taskService.updateRecipe(`${uri}`, recipeName, difficulty, prepTime, cookTime, ingredients, step1, step2, step3, step4, step5, step6, step7, step8, step9, step10, imgURL, videoURL, additionalLinks, tags).subscribe((response: any) => {
         console.log(response)
       });
     }

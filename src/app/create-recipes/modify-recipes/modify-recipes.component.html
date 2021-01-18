@@ -1,31 +1,67 @@
 <div class="container">
   <h1>Modify a Recipe</h1>
 </div>
-  <div class="form-container" *ngIf="recipes">
+  <div class="form-container needs-validation" *ngIf="recipes" nonvalidate>
     <div class="mb-3">
-      <label for="validationDefault01" class="form-label" required>Name</label>
-      <input #recipeName type="text" class="form-control" value="{{ recipes.recipeName }}">
+      <label for="validationCustom01" class="form-label" >Name</label>
+      <input #recipeName type="text" class="form-control" id="validationCustom01" value="{{ recipes.recipeName }}" required>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label" required>Difficulty</label>
-      <input #difficulty type="text" class="form-control" value="{{ recipes.difficulty }}">
+      <label for="validationCustom02" class="form-label" required>Difficulty</label>
+      <input #difficulty type="text" class="form-control" id="validationCustom02" value="{{ recipes.difficulty }}" required>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label" required>Prep Time</label>
-      <input #prepTime type="text" class="form-control" value="{{ recipes.prepTime }}">
+      <label for="validationCustom03" class="form-label" required>Prep Time</label>
+      <input #prepTime type="text" class="form-control" id="validationCustom03" value="{{ recipes.prepTime }}" required>
     </div>
     <div class="mb-3">
-      <label  for="exampleFormControlInput1" class="form-label" required>Cooking Time</label>
-      <input #cookTime type="text" class="form-control" value="{{ recipes.cookTiime }}">
+      <label  for="validationCustom04" class="form-label" required>Cooking Time</label>
+      <input #cookTime type="text" class="form-control" id="validationCustom04" value="{{ recipes.cookTiime }}" required>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label" required>Ingredients</label>
-      <input #ingredients class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{ recipes.ingredients }}">
-    </div>
+        <label for="validationCustom05" class="form-label" required>Ingredients</label>
+        <textarea #ingredients name="" class="form-control" id="validationCustom05" cols="90" rows="10" value="{{ recipes.ingredients }}" required></textarea>
+      </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label" required>Instructions</label>
-      <input #instructions class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{ recipes.instructions }}">
-    </div>
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 1</label>
+        <textarea #step1 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step1 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 2</label>
+        <textarea #step2 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step2 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 3</label>
+        <textarea #step3 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step3 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 4</label>
+        <textarea #step4 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step4 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 5</label>
+        <textarea #step5 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step5 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 6</label>
+        <textarea #step6 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step6 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 7</label>
+        <textarea #step7 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step7 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 8</label>
+        <textarea #step8 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step8 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 9</label>
+        <textarea #step9 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step9 }}"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Step 10</label>
+        <textarea #step10 name="" id="exampleFormControlTextarea1" cols="90" rows="7" value="{{ recipes.step10 }}"></textarea>
+      </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Image URL</label>
       <input #imgURL type="text" class="form-control" value="{{ recipes.imgURL }}">
@@ -35,11 +71,15 @@
       <input #videoURL type="text" class="form-control" value="{{ recipes.videoURL }}">
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label" required>Tags</label>
-      <input #tags type="text" class="form-control" value="{{ recipes.tags }}">
+        <label for="exampleFormControlTextarea1" class="form-label" required>Additional Links</label>
+        <textarea #additionalLinks name="" cols="90" rows="5" value="{{ recipes.additionalLinks }}"></textarea>
+      </div>
+    <div class="mb-3">
+      <label for="validationCustom06" class="form-label" required>Tags</label>
+      <input #tags type="text" class="form-control" id="validationCustom06" value="{{ recipes.tags }}" required>
     </div>
     <div class="button">
-      <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateRecipe(recipes._id, recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, instructions.value, imgURL.value, videoURL.value, tags.value)">Modify Recipe</button>
+      <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateRecipe(recipes._id, recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, step1.value, step2.value, step3.value, step4.value, step5.value, step6.value, step7.value, step8.value, step9.value, step10.value, imgURL.value, videoURL.value, additionalLinks.value, tags.value)">Modify Recipe</button>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -45,9 +45,19 @@ app.post('/create-recipes', (req, res) => {
   let prepTime = req.body.prepTime;
   let cookTime = req.body.cookTime;
   let ingredients = req.body.ingredients;
-  let instructions = req.body.instructions;
+  let step1 = req.body.step1;
+  let step2 = req.body.step2;
+  let step3 = req.body.step3;
+  let step4 = req.body.step4;
+  let step5 = req.body.step5;
+  let step6 = req.body.step6;
+  let step7 = req.body.step7;
+  let step8 = req.body.step8;
+  let step9 = req.body.step9;
+  let step10 = req.body.step10;
   let imgURL = req.body.imgURL;
   let videoURL = req.body.videoURL;
+  let additionalLinks = req.body.additionalLinks;
   let tags = req.body.tags;
 
   let newRecipe = new recipe({
@@ -56,9 +66,19 @@ app.post('/create-recipes', (req, res) => {
     prepTime,
     cookTime,
     ingredients,
-    instructions,
+    step1,
+    step2,
+    step3,
+    step4,
+    step5,
+    step6,
+    step7,
+    step8,
+    step9,
+    step10,
     imgURL,
     videoURL,
+    additionalLinks,
     tags
   });
   newRecipe.save().then((newRecipeDoc) => {
