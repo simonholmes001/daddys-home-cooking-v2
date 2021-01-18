@@ -11,7 +11,6 @@ import { RecipeListComponent } from './create-recipes/list-recipes/list-recipes.
 import { ModifyRecipesComponent } from './create-recipes/modify-recipes/modify-recipes.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
