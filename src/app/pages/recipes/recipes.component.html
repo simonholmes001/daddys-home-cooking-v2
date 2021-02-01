@@ -6,14 +6,91 @@
  <h4>made with ❤️ by Daddy ... and now made by you 😎</h4>
 </div>
 
- <div class="container-img">
+<div class="carousel">
+<ngb-carousel *ngIf="recipes" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let recipe of recipes">
+      <div class="picsum-img-wrapper">
+        <img [src]=recipe.imgURL alt="Random slide">
+      </div>
+      <div class="carousel-caption">
+      <h3>{{ recipe.recipeName }}</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <img [src]="image" alt="Random slide">
+        </div>
+        <div class="carousel-caption" *ngFor="let recipe of recipes">
+        <h3>{{ recipe.recipeName }}</h3>
+          <p>click on the image to go to the recipe</p>
+        </div>
+      </ng-template>
+    </ngb-carousel> -->
+
+  <hr>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="carousel" *ngFor="let recipe of recipes">
+    <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+          <div class="carousel-caption">
+          <h3>{{ recipe.recipeName }}</h3>
+          </div>
+          <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+              <img [src]="img" alt="My image {{i + 1}} description">
+            </div>
+          </a>
+        </ng-template>
+    </ngb-carousel>
+</div> -->
+
+<!-- <div class="container-img">
+    <div class='container-fluid'>
+        <div class='col-12'>
+            <ngb-carousel>
+                <ng-template ngbSlide>
+                    <img class="img-place" src="../../../assets/img/103272817_2654442921451221_1607034565752092947_n-600x600.jpg" alt="Delhi Metro">
+                    <div class="carousel-caption">
+                        <h3 style="color: yellow">Delhi Metro</h3>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img class="img-place" src="../../../assets/img/monika-grabkowska-w-R_sfcakP0-unsplash-600x600.jpg" alt="Bangalore Metro">
+                    <div class="carousel-caption">
+                        <h3 style="color: yellow">Bangalore Metro</h3>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img class="img-place" src="../../../assets/img/brooke-lark-229136-unsplash-600x600.jpg" alt="Channai Metro">
+                    <div class="carousel-caption">
+                        <h3 style="color: yellow">Channai Metro</h3>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</div> -->
+
+ <!-- <div class="container-img">
    <a href="/recipe-page"routerLink="/recipe-page" target="_blank"> <img class="img-place thumbnail" src="../../../assets/img/103272817_2654442921451221_1607034565752092947_n-600x600.jpg" style="max-width:100%;height:auto;" alt=""></a>
    <a href="/recipe-page" routerLink="/recipe-page" target="_blank">
     <div class="main-img-text">
       <span><h1 class="overlay-text">Pumkin Soup</h1></span>
     </div>
    </a>
-   </div>
+   </div> -->
 
 <div class="container">
   <h2>new recipes</h2>

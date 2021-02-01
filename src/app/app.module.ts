@@ -12,13 +12,16 @@ import { ModifyRecipesComponent } from './create-recipes/modify-recipes/modify-r
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { RecipesComponent } from './pages/recipes/recipes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     RpageComponent,
     RecipeCreateComponent,
     RecipeListComponent,
-    ModifyRecipesComponent
+    ModifyRecipesComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
