@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TaskService } from 'src/app/task.service';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { NgbCarouselConfig, NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,11 +14,7 @@ export class RecipesComponent implements OnInit {
 
   recipes: any[] | undefined;
 
-  constructor(private taskService: TaskService, config: NgbCarouselConfig) {
-    // config.interval = 2000;
-    // config.wrap = true;
-    // config.keyboard = false;
-    // config.pauseOnHover = false;
+  constructor(private taskService: TaskService, config: NgbCarouselConfig, private route: ActivatedRoute, private router: Router) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
   }
@@ -26,38 +23,13 @@ export class RecipesComponent implements OnInit {
   showNavigationIndicators = false;
   images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  // images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
-  // paused = false;
-  // unpauseOnArrow = false;
-  // pauseOnIndicator = false;
-  // pauseOnHover = true;
-  // pauseOnFocus = true;
-
-  // @ViewChild('carousel', {static : true})
-
-  // togglePaused() {
-  //   if (this.paused) {
-  //     this.carousel.cycle();
-  //   } else {
-  //     this.carousel.pause();
-  //   }
-  //   this.paused = !this.paused;
-  // }
-
-  // onSlide(slideEvent: NgbSlideEvent) {
-  //   if (this.unpauseOnArrow && slideEvent.paused &&
-  //     (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
-  //     this.togglePaused();
-  //   }
-  //   if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
-  //     this.togglePaused();
-  //   }
-  // }
-
   ngOnInit(): void {
     this.taskService.listRecipes().subscribe((recipes: any) => {
       return this.recipes = recipes;
     });
+  }
+
+  modifyRecipe(uri: string) {
+    this.router.navigateByUrl(`/modify-recipes/${uri}`);
   }
 }

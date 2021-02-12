@@ -22,3 +22,5 @@ export class RecipeCreateComponent implements OnInit {
   }
 
 }
+
+// window.location.replace() in the createRecipe() function allows to reload the create recipe page & have a fresh page with no prior input
