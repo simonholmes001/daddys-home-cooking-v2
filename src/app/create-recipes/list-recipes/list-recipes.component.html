@@ -1,11 +1,11 @@
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" *ngFor="let recipe of recipes">
       <div class="card-body mb-3 text-dark bg-light">
-      <h5 class="card-title">Name: {{ recipe.recipeName }}</h5>
+      <h4 class="card-title">Name: {{ recipe.recipeName }}</h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ recipe._id }}</h6>
-      <h6 class="card-subtitle mb-2">Difficulty: {{ recipe.difficulty }}</h6>
-      <h6 class="card-subtitle mb-2">Preparation Time: {{ recipe.prepTime }}</h6>
-      <h6 class="card-subtitle mb-2">Cooking Time: {{ recipe.cookTime }}</h6>
+      <p class="card-text"><b>Difficulty: </b> {{ recipe.difficulty }}</p>
+      <p class="card-text"><b>Preparation Time: </b> {{ recipe.prepTime }}</p>
+      <p class="card-text"><b>Cooking Time: </b> {{ recipe.cookTime }}</p>
       <p class="card-text"> <b>Ingredients: </b> {{ recipe.ingredients }}</p>
       <p class="card-text"><b>Step 1: </b> {{ recipe.step1 }}</p>
       <p class="card-text"><b>Step 2: </b> {{ recipe.step2 }}</p>
@@ -17,10 +17,10 @@
       <p class="card-text"><b>Step 8: </b> {{ recipe.step8 }}</p>
       <p class="card-text"><b>Step 9: </b> {{ recipe.step9 }}</p>
       <p class="card-text"><b>Step 10: </b> {{ recipe.step10 }}</p>
-      <h6 class="card-subtitle mb-2">Additional Links: {{ recipe.additionalLinks }}</h6>
-      <h6 class="card-subtitle mb-2">Tags: {{ recipe.tags }}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">{{ recipe.imgURL }}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">{{ recipe.videoURL }}</h6>
+      <p class="card-text"><b>Additional Links: </b> {{ recipe.additionalLinks }}</p>
+      <p class="card-text"><b>Tags: </b> {{ recipe.tags }}</p>
+      <p class="card-text"><b>Image URL: </b> {{ recipe.imgURL }}</p>
+      <p class="card-text"><b>Video URL: </b> {{ recipe.videoURL }}</p>
       <a class="btn btn-success btn-modify" (click)="modifyRecipe(recipe._id)" >Modify</a>
       <a class="btn btn-danger btn-delete" (click)="deleteRecipe(recipe._id)">Delete</a>
       </div> <br><br>

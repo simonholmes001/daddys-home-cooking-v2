@@ -4,19 +4,28 @@
 
 <div class="container">
  <h4>made with ❤️ by Daddy ... and now made by you 😎</h4>
+ <br><br>
+ <h6>scroll down for more...</h6>
 </div>
 
- <div class="container-img">
-   <a href="/recipe-page"routerLink="/recipe-page" target="_blank"> <img class="img-place thumbnail" src="../../../assets/img/103272817_2654442921451221_1607034565752092947_n-600x600.jpg" style="max-width:100%;height:auto;" alt=""></a>
-   <a href="/recipe-page" routerLink="/recipe-page" target="_blank">
-    <div class="main-img-text">
-      <span><h1 class="overlay-text">Pumkin Soup</h1></span>
-    </div>
-   </a>
-   </div>
+<div class="carousel">
+<ngb-carousel *ngIf="recipes" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let recipe of recipes">
+      <div class="picsum-img-wrapper">
+      <a href="/recipe-page/{{ recipe._id }}"routerLink="/recipe-page/{{ recipe._id }}" target="_blank">
+          <img [src]=recipe.imgURL alt="Random slide">
+        </a>
+      </div>
+      <div class="carousel-caption">
+      <h3>{{ recipe.recipeName }}</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <hr>
+</div>
 
 <div class="container">
-  <h2>new recipes</h2>
+  <h2>recipe collections</h2>
   <h4>"yum yum yum"</h4>
 </div>
 

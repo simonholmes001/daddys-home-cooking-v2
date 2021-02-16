@@ -11,7 +11,10 @@ import { RecipeListComponent } from './create-recipes/list-recipes/list-recipes.
 import { ModifyRecipesComponent } from './create-recipes/modify-recipes/modify-recipes.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { RecipesComponent } from './pages/recipes/recipes.component';
+
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RpageComponent,
     RecipeCreateComponent,
     RecipeListComponent,
-    ModifyRecipesComponent
+    ModifyRecipesComponent,
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

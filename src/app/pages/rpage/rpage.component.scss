@@ -1,5 +1,67 @@
 @import "../../../styles.scss";
 
-p {
-  color: color(secondary);
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 45% 45%;
+  height: 100vh;
+  margin: 2em;
+}
+
+.image {
+  margin: 2em;
+  margin-left: 6em;
+}
+
+.title .text {
+  margin: 2em;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+main {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+section.text {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+section.ingredients {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.icon {
+  color: cadetblue;
+  margin-left: 5.5em;
+  margin-top: -5%;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .lni {
+    font-size: 32px;
+  }
+}
+
+.container-ingredients {
+  padding: 2em;
+  margin-left: 3.5em;
+}
+
+.youtube {
+  margin-left: 8em;
 }

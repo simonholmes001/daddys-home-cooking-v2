@@ -1,3 +1,125 @@
-<div class="container">
-  <p>rpage works!</p>
+<div class="grid-container" *ngIf="recipes">
+  <div class="image">
+    <img src="{{ recipes.imgURL }}" alt="">
+  </div>
+  <main class="title">
+    {{ recipes.recipeName }}
+  </main>
+  <section class="text">
+    <div *ngIf="recipes.step1">
+      <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              1
+          </strong>
+      </span> {{ recipes.step1 }} <br><br></div>
+
+        <div *ngIf="recipes.step2">
+          <span class="fa-stack">
+            <span class="fa fa-circle-o fa-stack-2x"></span>
+            <strong class="fa-stack-1x">
+                2
+            </strong>
+      </span>  {{ recipes.step2 }} <br><br></div>
+
+      <div *ngIf="recipes.step3">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              3
+          </strong>
+      </span>  {{ recipes.step3 }} <br><br></div>
+
+      <div *ngIf="recipes.step4">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              4
+          </strong>
+      </span>  {{ recipes.step4 }} <br><br></div>
+
+      <div *ngIf="recipes.step5">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              5
+          </strong>
+      </span>  {{ recipes.step5 }} <br><br></div>
+
+      <div *ngIf="recipes.step6">
+          <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              6
+          </strong>
+      </span>  {{ recipes.step6 }} <br><br></div>
+
+      <div *ngIf="recipes.step7">
+          <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              7
+          </strong>
+      </span>  {{ recipes.step7 }} <br><br></div>
+
+      <div *ngIf="recipes.step8">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              8
+          </strong>
+      </span>  {{ recipes.step8 }} <br><br></div>
+
+      <div *ngIf="recipes.step9">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              9
+          </strong>
+      </span>  {{ recipes.step9 }} <br><br></div>
+
+      <div *ngIf="recipes.step10">
+         <span class="fa-stack">
+          <span class="fa fa-circle-o fa-stack-2x"></span>
+          <strong class="fa-stack-1x">
+              10
+          </strong>
+      </span>  {{ recipes.step10 }} <br><br></div>
+  </section>
+
+  <section class="ingredients">
+    <div class="icon">
+        <h1 class="title"><i class="lni lni-shopping-basket"></i> <i class="lni lni-dinner"></i> <i class="lni lni-chef-hat"></i> | Ingredients</h1>
+    </div>
+      <div class="container-ingredients">
+        {{ recipes.ingredients }}
+      </div>
+<br>
+      <div class="icon">
+        <h1 class="title"><i class="lni lni-thumbs-up"></i> | Difficulty | {{ recipes.difficulty }}</h1>
+    </div>
+<br><br>
+      <div class="icon">
+        <h1 class="title"><i class="lni lni-timer"></i> | Prep Time | {{ recipes.prepTime }}</h1>
+    </div>
+<br><br>
+      <div class="icon">
+        <h1 class="title"><i class="lni lni-timer"></i> | Cooking Time | {{ recipes.cookTime }}</h1>
+    </div>
+<br><br>
+      <div class="icon">
+        <h1 class="title"><i class="lni lni-pizza"></i> | {{ recipes.tags }}</h1>
+    </div>
+  </section>
 </div>
+
+<section class="embedd">
+<div class="youtube" *ngIf="recipes.videoURL">
+<youtube-player
+  videoId="{{ recipes.videoURL }}"
+  suggestedQuality="highres"
+  [height]="315"
+  [width]="560">
+</youtube-player>
+</div>
+</section>
