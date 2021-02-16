@@ -10,8 +10,10 @@ import { TaskService } from 'src/app/task.service';
 export class RpageComponent implements OnInit {
 
   public recipes!: any
+  dangerousVideoUrl: any;
+  videoUrl: any;
 
-  constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private taskService: TaskService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -24,4 +26,5 @@ export class RpageComponent implements OnInit {
       }
       )
   }
+
 }

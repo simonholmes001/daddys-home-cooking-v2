@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RecipesComponent } from './pages/recipes/recipes.component';
 
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,7 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
     RecipeCreateComponent,
     RecipeListComponent,
     ModifyRecipesComponent,
-    RecipesComponent
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

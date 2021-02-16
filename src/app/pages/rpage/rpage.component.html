@@ -106,7 +106,20 @@
       <div class="icon">
         <h1 class="title"><i class="lni lni-timer"></i> | Cooking Time | {{ recipes.cookTime }}</h1>
     </div>
-
+<br><br>
+      <div class="icon">
+        <h1 class="title"><i class="lni lni-pizza"></i> | {{ recipes.tags }}</h1>
+    </div>
   </section>
-
 </div>
+
+<section class="embedd">
+<div class="youtube" *ngIf="recipes.videoURL">
+<youtube-player
+  videoId="{{ recipes.videoURL }}"
+  suggestedQuality="highres"
+  [height]="315"
+  [width]="560">
+</youtube-player>
+</div>
+</section>
