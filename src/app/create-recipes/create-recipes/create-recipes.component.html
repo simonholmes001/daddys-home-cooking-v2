@@ -79,5 +79,23 @@
     <label for="validationCustom06" class="form-label" required>Tags</label>
     <input #tags type="text" class="form-control" id="validationCustom06"  value="Tags" required>
   </div>
-    <button type="submit" class="btn btn-primary" (click)="createRecipe(recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, step1.value, step2.value, step3.value, step4.value, step5.value, step6.value, step7.value, step8.value, step9.value, step10.value, imgURL.value, videoURL.value, additionalLinks.value, tags.value)">Create your Recipe</button>
+    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="createRecipe(recipeName.value, difficulty.value, prepTime.value, cookTime.value, ingredients.value, step1.value, step2.value, step3.value, step4.value, step5.value, step6.value, step7.value, step8.value, step9.value, step10.value, imgURL.value, videoURL.value, additionalLinks.value, tags.value)">Create your Recipe</button>
   </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" *ngIf="recipes">
+            <h5 class="modal-title" id="exampleModalLabel">Recipe for {{ recipes.recipeName }} has been modified</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary notification" (click)="sendNotification()">Send Notification</button>
+            </div>
+          </div>
+        </div>
+      </div>
