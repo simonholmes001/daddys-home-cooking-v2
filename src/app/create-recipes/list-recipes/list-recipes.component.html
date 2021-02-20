@@ -1,7 +1,7 @@
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" *ngFor="let recipe of recipes">
       <div class="card-body mb-3 text-dark bg-light">
-      <h4 class="card-title">Name: {{ recipe.recipeName }}</h4>
+      <h2 class="card-title">Name: {{ recipe.recipeName }}</h2>
       <h6 class="card-subtitle mb-2 text-muted">{{ recipe._id }}</h6>
       <p class="card-text"><b>Difficulty: </b> {{ recipe.difficulty }}</p>
       <p class="card-text"><b>Preparation Time: </b> {{ recipe.prepTime }}</p>

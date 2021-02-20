@@ -1,5 +1,9 @@
 @import "../../../styles.scss";
 
+h2 {
+  letter-spacing: 2px;
+}
+
 h3 {
   color: color(secondary);
 }
@@ -32,4 +36,14 @@ p {
   display: grid;
   justify-content: center;
   padding: 1em;
+}
+
+.form-label {
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.form-control {
+  letter-spacing: 2px;
+  font-size: 18px;
 }

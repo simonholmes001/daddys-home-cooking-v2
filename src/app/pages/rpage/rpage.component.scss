@@ -16,6 +16,7 @@ body {
 .image {
   margin: 2em;
   margin-left: 6em;
+  margin-bottom: 0;
 }
 
 .title .text {
@@ -25,7 +26,18 @@ body {
 .title {
   font-size: 32px;
   font-weight: bold;
-  margin-top: 0.5em;
+  margin-top: 0.8em;
+  letter-spacing: 2px;
+}
+
+.step {
+  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.ingredients {
+  line-height: 30px;
 }
 
 main {
@@ -36,11 +48,16 @@ main {
 section.text {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  margin-right: 10%;
 }
 
 section.ingredients {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+}
+
+.fa-stack-1x {
+  color: cadetblue;
 }
 
 .icon {
@@ -59,9 +76,13 @@ section.ingredients {
 
 .container-ingredients {
   padding: 2em;
-  margin-left: 3.5em;
+  margin-top: -2%;
+  margin-left: 3em;
+  letter-spacing: 2px;
+  font-size: 16px;
 }
 
 .youtube {
   margin-left: 8em;
+  margin-top: 10%;
 }
