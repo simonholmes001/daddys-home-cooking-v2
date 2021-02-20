@@ -17,6 +17,47 @@ grid-template-areas:
  justify-content: center;
  justify-items: center;
  color: color(secondary);
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    letter-spacing: 2px;
+  }
+
+  h4 {
+    letter-spacing: 2px;
+  }
+
+  h6 {
+    letter-spacing: 2px;
+  }
+}
+
+.container-recipes {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+ //  background-color: red;
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+  color: color(secondary);
+  margin-top: -5%;
+
+  h2 {
+    letter-spacing: 2px;
+  }
+
+  h4 {
+    letter-spacing: 2px;
+  }
 }
 
 .carousel {
@@ -43,6 +84,7 @@ grid-template-areas:
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
+      letter-spacing: 2px;
     }
 
     p {

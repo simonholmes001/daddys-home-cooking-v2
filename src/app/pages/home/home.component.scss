@@ -18,6 +18,7 @@
   padding-left: 4em;
   margin: 0;
   color: color(primary);
+  letter-spacing: 2px;
  }
 
  .sub-text {
@@ -25,6 +26,7 @@
   padding-left: 4em;
   margin: 0;
   color: color(primary);
+  letter-spacing: 2px;
  }
 
 }
@@ -47,7 +49,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
- margin-left: -33.5%;
+ margin-left: -34.7%;
  margin-top: -5%;
  padding-top: 9.5%;
  padding-bottom: 15%;
@@ -72,10 +74,14 @@
 	margin-bottom: 50px;
 	padding: 7px 15px;
 	text-align: left;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .slider-text1 {
-	animation: slide 5s linear infinite;
+  animation: slide 5s linear infinite;
+}
+
+h3 {
+  letter-spacing: 2px;
 }
 
 @keyframes slide {
