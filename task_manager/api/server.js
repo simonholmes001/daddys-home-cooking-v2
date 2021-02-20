@@ -8,6 +8,10 @@ const bodyParser = require('body-parser');
 // Load in the mongoose models
 const { recipe } = require('./db/models/recipe_model');
 
+// For environmeent variables for Twilio connection
+require('dotenv').config();
+
+// Connect to monogDB database
 connectDB()
 
 // Load middleware
@@ -103,6 +107,25 @@ app.delete('/list-recipes/:id', (req, res) => {
     res.send(removedRecipeDoc);
   });
 })
+
+
+// Send a sms notification
+
+// Create a recipe
+app.get('/sendSMS', (req, res) => {
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
+  const client = require('twilio')(accountSid, authToken);
+
+  client.messages
+    .create({
+      body: "Quick! Daddy's Home Cooking has just released a new recipe #yum",
+      from: '+12487800071',
+      to: '+33631292338'
+    })
+    .then(message => res.send(`The message to ${message.to} was sent. Noice!`))
+    .catch(err => console.log(err)) ;
+  })
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");

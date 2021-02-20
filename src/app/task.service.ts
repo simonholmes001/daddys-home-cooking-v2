@@ -30,4 +30,8 @@ export class TaskService {
     return this.webRequestService.patch(`list-recipes/${_id}`, { recipeName, difficulty, prepTime, cookTime, ingredients, step1, step2, step3, step4, step5, step6, step7, step8, step9, step10, imgURL, videoURL, additionalLinks, tags });
   }
 
+  sendNotification() {
+    return this.webRequestService.get('sendSMS');
+  }
+
 }
